@@ -1,0 +1,24 @@
+{
+  "name": "tech4good-backend",
+  "version": "1.0.0",
+  "description": "Backend for the Tech4Good",
+  "main": "route.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillemparrado/Tech4good-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillemparrado/Tech4good-Backend/issues"
+  },
+  "homepage": "https://github.com/guillemparrado/Tech4good-Backend#readme",
+  "dependencies": {
+    "mysql2": "^3.4.0",
+    "sequelize": "^6.32.1"
+  }
+}
