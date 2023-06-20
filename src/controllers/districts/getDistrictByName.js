@@ -4,7 +4,7 @@ const NoDistrictsException = require('../../helpers/exceptions/NoGamesPlayedExce
 
 const getDistrictByName = async (req, res) => {
     try {
-      const districtFilter = req.body 
+      const districtFilter = req.body
       const runner = new ServerReply(res)
       const district = await Districts.findOne({where: {districtFilter}}) // falta el modelo
       if (!district) throw new NoDistrictsException('No district was found.')
