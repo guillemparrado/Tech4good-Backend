@@ -1,7 +1,9 @@
 # Tech4good-Backend
 Backend for the Tech4Good
 
-## Create user
+## Installation
 
-1. Cd on folder scripts
-2. Create user
+After cloning: 
+- `npm i` to install node packages.
+- `mysql -u root -p < scripts/init.sql` to create user and database.
+- `npm start` to run the application.
