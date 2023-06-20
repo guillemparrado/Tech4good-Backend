@@ -7,7 +7,7 @@ const getAllDistricts = async (req, res) => {
       const runner = new ServerReply(res)
       const districtList = await Districts.findAll() // falta el modelo
       if (!districtList) throw new NoDistrictsException('No districts found.')
-        
+
       runner.sendResponse(200, districtList) // Return the games as JSON
   
     } catch (error) {
