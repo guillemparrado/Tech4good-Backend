@@ -1,5 +1,5 @@
 const { sequelize } = require("./utils/sequelize_connect");
-const { User } = require("./models/User");
+require("./models")
 
 const main = async () => {
   try {
@@ -7,21 +7,14 @@ const main = async () => {
     await sequelize.sync();
 
     const express = require("express");
-    const userRoute = require("./routes/userRoute");
     const defaultRoutes = require("./routes/defaultRoutes");
     const districtsRoute = require("./routes/districtsRoutes")
     const groupsRoutes = require("./routes/groupsRoutes")
 
     const app = express();
-    app.use("/user", userRoute);
     app.use("/distrito", districtsRoute)
     app.use("/grupoActividad", groupsRoutes)
     app.use("/", defaultRoutes);
-
-    User.create({
-      username: "demo_user",
-      birthday: Date.now(),
-    });
 
     const server = app.listen(80, () => {
       let host = server.address().address;
