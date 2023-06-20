@@ -8,7 +8,7 @@ const {sequelize} = require("../utils/sequelize_connect")
         type: DataTypes.INTEGER,
         
       },
-      població: {
+      poblacio: {
         type: DataTypes.INTEGER
       },
       activ_hab_abs: {
