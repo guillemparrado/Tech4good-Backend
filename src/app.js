@@ -10,10 +10,12 @@ const main = async () => {
     const userRoute = require("./routes/userRoute");
     const defaultRoutes = require("./routes/defaultRoutes");
     const districtsRoute = require("./routes/districtsRoutes")
+    const groupsRoutes = require("./routes/groupsRoutes")
 
     const app = express();
     app.use("/user", userRoute);
     app.use("/distrito", districtsRoute)
+    app.use("/grupoActividad", groupsRoutes)
     app.use("/", defaultRoutes);
 
     User.create({

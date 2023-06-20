@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const {sequelize} = require("../utils/sequelize_connect")
-// const {Districts} = require('../models/Districts')
+const {Districts} = require('../models/Districts')
 
 
     const Neighborhoods = sequelize.define("Neighborhoods", {
@@ -15,9 +15,9 @@ const {sequelize} = require("../utils/sequelize_connect")
       },
     });
 
-    // Neighborhoods.associate = (models) => {
-    //     Neighborhoods.belongsTo(models.Districts, { as: 'district', foreignKey: 'districtId' });
-    //   };
+    Neighborhoods.associate = (models) => {
+        Neighborhoods.belongsTo(models.Districts, { as: 'district', foreignKey: 'districtId' });
+      };
   
     module.exports = {
         Neighborhoods,

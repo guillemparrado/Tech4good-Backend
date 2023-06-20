@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const {sequelize} = require("../utils/sequelize_connect")
-// const {Activities} = require('../models/Activities')
+const {Activities} = require('../models/Activities')
 
     const Groups = sequelize.define("Groups", {
       id: {
@@ -14,9 +14,9 @@ const {sequelize} = require("../utils/sequelize_connect")
       },
     });
 
-     // Groups.associate = (models) => {
-    //     Groups.hasMany(models.Activities, { as: 'group', foreignKey: 'groupId' });
-    //   };
+     Groups.associate = (models) => {
+        Groups.hasMany(models.Activities, { as: 'group', foreignKey: 'groupId' });
+      };
   
     module.exports = {
         Groups,
