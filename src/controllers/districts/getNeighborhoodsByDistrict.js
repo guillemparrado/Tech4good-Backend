@@ -1,6 +1,7 @@
 const ServerReply = require('../../utils/ServerReply.js')
 const showDevError = require('../../utils/showDevError.js')
 const NoNeighborhoodsException = require('../../exceptions/NoNeighborhoodsException.js')
+const {Neighborhoods} = require('../../models/Neighborhoods')
 
 const getNeighborhoodsByDistrict = async (req, res) => {
     try {

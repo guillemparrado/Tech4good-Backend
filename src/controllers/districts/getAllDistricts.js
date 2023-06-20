@@ -1,6 +1,7 @@
 const ServerReply = require('../../utils/ServerReply.js')
 const showDevError = require('../../utils/showDevError.js')
 const NoDistrictsException = require('../../exceptions/NoDistrictsException.js')
+const {Districts} = require('../../models/Districts')
 
 const getAllDistricts = async (req, res) => {
     try {
