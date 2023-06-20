@@ -4,12 +4,12 @@ const NoNeighborhoodsException = require('../../exceptions/NoNeighborhoodsExcept
 
 const getNeighborhoodsByDistrict = async (req, res) => {
     try {
-      const filter = req.body
+      const districtFilter = req.params
       const runner = new ServerReply(res)
-      const district = await Districts.findOne({where: {districtFilter}}) // falta el modelo
-      if (!district) throw new NoNeighborhoodsException('No neighborhoods were found.')
+      const neighborhoodList = await Districts.findOne({where: {districtFilter}}) // falta el modelo y los atributos que se quieren mostrar
+      if (!neighborhoodList) throw new NoNeighborhoodsException('No neighborhoods were found.')
         
-      runner.sendResponse(200, district) // Return the games as JSON
+      runner.sendResponse(200, neighborhoodList)
   
     } catch (error) {
       const runner = new ServerReply(res)

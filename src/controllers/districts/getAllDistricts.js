@@ -1,6 +1,6 @@
-const ServerReply = require('../../helpers/ServerReply.js')
-const showDevError = require('../../helpers/showDevError.js')
-const NoDistrictsException = require('../../helpers/exceptions/NoGamesPlayedException.js')
+const ServerReply = require('../../utils/ServerReply.js')
+const showDevError = require('../../utils/showDevError.js')
+const NoDistrictsException = require('../../exceptions/NoDistrictsException.js')
 
 const getAllDistricts = async (req, res) => {
     try {

@@ -1,4 +1,4 @@
-class NoDistrictsException extends Error {
+class NoNeighborhoodsException extends Error {
     constructor(message) {
         super(message)
     }
