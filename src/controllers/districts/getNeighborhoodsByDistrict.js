@@ -6,7 +6,7 @@ const getNeighborhoodsByDistrict = async (req, res) => {
     try {
       const districtFilter = req.params
       const runner = new ServerReply(res)
-      const neighborhoodList = await Districts.findOne({where: {districtFilter}}) // falta el modelo y los atributos que se quieren mostrar
+      const neighborhoodList = await Neighborhoods.findOne({where: {districtFilter}}) // falta el modelo y los atributos que se quieren mostrar
       if (!neighborhoodList) throw new NoNeighborhoodsException('No neighborhoods were found.')
         
       runner.sendResponse(200, neighborhoodList)
