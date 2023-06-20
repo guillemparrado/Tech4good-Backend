@@ -26,10 +26,10 @@ const {Districts} = require('../models/Districts')
         type: DataTypes.INTEGER
       },
       geometria_etrs89: {
-        type: DataTypes.GEOMETRY('POINT', 4326)
+        type: DataTypes.TEXT
       },
       geometria_wgs84: {
-        type: DataTypes.GEOMETRY('POINT', 4326)
+        type: DataTypes.TEXT
       },
       p_venta_rel: {
         type: DataTypes.DECIMAL
