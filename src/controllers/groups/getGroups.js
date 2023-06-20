@@ -1,6 +1,7 @@
 const ServerReply = require('../../utils/ServerReply.js')
 const showDevError = require('../../utils/showDevError.js')
 const NoGroupsException = require('../../exceptions/NoGroupsException.js')
+const {Groups} = require('../../models/Groups')
 
 const getGroups = async (req, res) => {
     try {

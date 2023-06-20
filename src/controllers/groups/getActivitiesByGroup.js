@@ -1,6 +1,7 @@
 const ServerReply = require('../../utils/ServerReply.js')
 const showDevError = require('../../utils/showDevError.js')
 const NoActivitiesException = require('../../exceptions/NoActivitiesException.js')
+const {Activities} = require('../../models/Activities')
 
 const getActivitiesByGroup = async (req, res) => {
     try {
