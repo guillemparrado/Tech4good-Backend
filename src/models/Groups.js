@@ -20,9 +20,6 @@ const {Activities} = require('../models/Activities')
       
     });
 
-     Groups.associate = (models) => {
-        Groups.hasMany(models.Activities, { as: 'group', foreignKey: 'groupId' });
-      };
   
     module.exports = {
         Groups,

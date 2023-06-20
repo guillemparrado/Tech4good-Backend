@@ -17,10 +17,6 @@ const {Neighborhoods} = require('../models/Neighborhoods')
       //   primaryKey: true
       // }
     });
-
-    Districts.associate = (models) => {
-        Districts.hasMany(models.Neighborhoods, { as: 'neighborhoods', foreignKey: 'districtId' });
-      };
   
     module.exports = {
         Districts,

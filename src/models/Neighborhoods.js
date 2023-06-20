@@ -39,10 +39,6 @@ const {Districts} = require('../models/Districts')
       }
 
     });
-
-    Neighborhoods.associate = (models) => {
-        Neighborhoods.belongsTo(models.Districts, { as: 'district', foreignKey: 'districtId' });
-      };
   
     module.exports = {
         Neighborhoods,

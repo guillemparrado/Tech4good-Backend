@@ -1,5 +1,5 @@
 const { sequelize } = require("./utils/sequelize_connect");
-require("./models")
+require("./models/mapModels");
 
 const main = async () => {
   try {
@@ -8,12 +8,12 @@ const main = async () => {
 
     const express = require("express");
     const defaultRoutes = require("./routes/defaultRoutes");
-    const districtsRoute = require("./routes/districtsRoutes")
-    const groupsRoutes = require("./routes/groupsRoutes")
+    const districtsRoute = require("./routes/districtsRoutes");
+    const groupsRoutes = require("./routes/groupsRoutes");
 
     const app = express();
-    app.use("/distrito", districtsRoute)
-    app.use("/grupoActividad", groupsRoutes)
+    app.use("/distrito", districtsRoute);
+    app.use("/grupoActividad", groupsRoutes);
     app.use("/", defaultRoutes);
 
     const server = app.listen(80, () => {
