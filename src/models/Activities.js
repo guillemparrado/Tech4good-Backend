@@ -4,15 +4,21 @@ const {Groups} = require('../models/Groups')
 
 
     const Activities = sequelize.define("Activities", {
-      id: {
-        type:DataTypes.INTEGER,
-        primaryKey: true,
-        unique: true,
-        autoIncrement: true
+      // id: {
+      //   type:DataTypes.INTEGER,
+      //   primaryKey: true,
+      //   unique: true,
+      //   autoIncrement: true
+      // },
+      id_activitat: {
+        type: DataTypes.INTEGER,
+        primaryKey: true
       },
-      name: {
+
+      nom_activitat: {
         type: DataTypes.STRING,
       },
+      
     });
 
     Activities.associate = (models) => {

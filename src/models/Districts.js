@@ -4,14 +4,18 @@ const {Neighborhoods} = require('../models/Neighborhoods')
 
     const Districts = sequelize.define("Districts", {
       id: {
-        type:DataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         unique: true,
         autoIncrement: true
       },
-      name: {
+      nom_districte: {
         type: DataTypes.STRING,
       },
+      // id_districte: {
+      //   type: DataTypes.INTEGER,
+      //   primaryKey: true
+      // }
     });
 
     Districts.associate = (models) => {
